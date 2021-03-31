@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:medical_ui/constant.dart';
-import 'package:medical_ui/screen/start_screen.dart';
+import 'package:medical_ui/pages/start_screen.dart';
 
 void main() {
   runApp(MyApp());

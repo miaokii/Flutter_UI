@@ -29,7 +29,6 @@ class MyHeader extends StatelessWidget {
   }
 }
 
-
 class MyCliper extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
