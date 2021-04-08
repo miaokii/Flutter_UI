@@ -16,7 +16,7 @@ class DefaultButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
-      height: 60,
+      height: 65,
       child: TextButton(
         onPressed: press,
         child: Text(
@@ -28,7 +28,7 @@ class DefaultButton extends StatelessWidget {
                 MaterialStateProperty.resolveWith((states) => kPrimaryColor),
             shape: MaterialStateProperty.resolveWith((states) =>
                 RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(15)))),
+                    borderRadius: BorderRadius.circular(25)))),
       ),
     );
   }

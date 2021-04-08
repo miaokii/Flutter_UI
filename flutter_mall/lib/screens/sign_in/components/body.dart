@@ -57,13 +57,13 @@ class Body extends StatelessWidget {
             Row(mainAxisAlignment: MainAxisAlignment.center, children: [
               Text(
                 'Don\'t have an account?',
-                style: TextStyle(fontSize: 13.r),
+                style: TextStyle(fontSize: 16.r),
               ),
               SizedBox(
                 width: 5,
               ),
               Text('Sign up',
-                  style: TextStyle(fontSize: 13.r, color: kPrimaryColor))
+                  style: TextStyle(fontSize: 16.r, color: kPrimaryColor))
             ])
           ],
         ),

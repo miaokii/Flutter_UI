@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mall/components/custom_svg.dart';
 import 'package:flutter_mall/components/default_button.dart';
 import 'package:flutter_mall/components/form_error.dart';
+import 'package:flutter_mall/screens/forgot_password/forgot_password_screen.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../constants.dart';
 
@@ -11,10 +12,9 @@ class SignForm extends StatefulWidget {
 }
 
 class _SignFormState extends State<SignForm> {
-  
   String email;
   String password;
-  
+
   final _formKey = GlobalKey<FormState>();
   final List<String> errors = [];
   bool _remember = false;
@@ -31,21 +31,31 @@ class _SignFormState extends State<SignForm> {
             SizedBox(height: 30.r),
             Row(
               children: [
-                Checkbox(value: _remember,
-                activeColor: kPrimaryColor,
-                 onChanged: (value) {
-                  setState(() {
-                    _remember = value; 
-                  });
-                }),
+                Checkbox(
+                    value: _remember,
+                    activeColor: kPrimaryColor,
+                    onChanged: (value) {
+                      setState(() {
+                        _remember = value;
+                      });
+                    }),
                 Text('Remember me'),
                 Spacer(),
-                Text('Forgot Password', style: TextStyle(decoration: TextDecoration.underline),)
+                GestureDetector(
+                  onTap: (){
+                    Navigator.pushNamed(context, ForgotPasswordScreen.roteName);
+                  },
+                    child: Text(
+                  'Forgot Password',
+                  style: TextStyle(decoration: TextDecoration.underline),
+                ))
               ],
             ),
             SizedBox(height: 20.r),
             FormError(errors: errors),
-            SizedBox(height: 20.r,),
+            SizedBox(
+              height: 20.r,
+            ),
             DefaultButton(
               text: 'Continue',
               press: () {
@@ -68,8 +78,7 @@ class _SignFormState extends State<SignForm> {
           setState(() {
             errors.remove(kPassNullError);
           });
-        } else if (text.length >=8 &&
-            errors.contains(kShortPassError)) {
+        } else if (text.length >= 8 && errors.contains(kShortPassError)) {
           setState(() {
             errors.remove(kShortPassError);
           });
@@ -81,8 +90,7 @@ class _SignFormState extends State<SignForm> {
           setState(() {
             errors.add(kPassNullError);
           });
-        } else if (text.length < 8 &&
-            !errors.contains(kShortPassError)) {
+        } else if (text.length < 8 && !errors.contains(kShortPassError)) {
           setState(() {
             errors.add(kShortPassError);
           });
