@@ -14,10 +14,9 @@ class DefaultButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 50,
+    return SizedBox(
       width: double.infinity,
-      margin: EdgeInsets.symmetric(horizontal: 30.w),
+      height: 60,
       child: TextButton(
         onPressed: press,
         child: Text(

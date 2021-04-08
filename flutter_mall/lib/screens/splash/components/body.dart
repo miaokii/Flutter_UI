@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mall/constants.dart';
 import 'package:flutter_mall/screens/sign_in/sign_in_screen.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../components/splash_content.dart';
 import '../../../components/default_button.dart';
 
@@ -57,11 +58,14 @@ class _BodyState extends State<Body> {
                   Spacer(
                     flex: 2,
                   ),
-                  DefaultButton(
-                    text: 'Continue',
-                    press: () {
-                      Navigator.pushNamed(context, SignInScreen.roteName);
-                    },
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 20.r),
+                    child: DefaultButton(
+                      text: 'Continue',
+                      press: () {
+                        Navigator.pushNamed(context, SignInScreen.roteName);
+                      },
+                    ),
                   ),
                   Spacer()
                 ],
