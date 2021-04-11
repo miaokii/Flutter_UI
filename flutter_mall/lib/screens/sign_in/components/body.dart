@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mall/components/socal_card.dart';
+import 'package:flutter_mall/screens/register_account/register_screen.dart';
 import 'package:flutter_mall/screens/sign_in/components/sign_form.dart';
 import '../../../constants.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -21,14 +22,14 @@ class Body extends StatelessWidget {
               height: 20.r,
             ),
             Text(
-              'Register Account',
+              'Welcome Back',
               style: headingStyle,
             ),
             SizedBox(
               height: 20,
             ),
             Text(
-              'Complete your details or continue \nwith social media',
+              'Sign in with your email and password\nor continue with social media',
               textAlign: TextAlign.center,
               style: TextStyle(color: kSecondaryColor),
             ),
@@ -62,8 +63,13 @@ class Body extends StatelessWidget {
               SizedBox(
                 width: 5,
               ),
-              Text('Sign up',
-                  style: TextStyle(fontSize: 16.r, color: kPrimaryColor))
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, RegisterScreen.roteName);
+                },
+                child: Text('Sign up',
+                    style: TextStyle(fontSize: 16.r, color: kPrimaryColor)),
+              )
             ])
           ],
         ),
