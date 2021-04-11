@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../constants.dart';
 
 class DefaultButton extends StatelessWidget {
@@ -21,7 +20,7 @@ class DefaultButton extends StatelessWidget {
         onPressed: press,
         child: Text(
           text,
-          style: TextStyle(color: Colors.white, fontSize: 18.r),
+          style: TextStyle(color: Colors.white, fontSize: 18),
         ),
         style: ButtonStyle(
             backgroundColor:

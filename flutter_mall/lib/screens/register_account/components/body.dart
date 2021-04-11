@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mall/components/default_button.dart';
 import 'package:flutter_mall/components/form_error.dart';
 import 'package:flutter_mall/components/socal_card.dart';
+import 'package:flutter_mall/screens/complete_profile/complete_profile_screen.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../constants.dart';
@@ -31,7 +32,7 @@ class _BodyState extends State<Body> {
                 style: headingStyle,
               ),
               SizedBox(
-                height: 20,
+                height: 10,
               ),
               Text(
                 'Complete your details or continue \nwith social media',
@@ -111,6 +112,7 @@ class _RegisterFormState extends State<RegisterForm> {
             press: () {
               if (_formKey.currentState.validate()) {
                 _formKey.currentState.save();
+                Navigator.pushNamed(context, CompleteProfile.roteName);
               }
             },
           ),

@@ -19,7 +19,7 @@ class _BodyState extends State<Body> {
       child: SingleChildScrollView(
               child: Column(
           children: [
-            SizedBox(height: 20.r),
+            SizedBox(height: 10.r),
             Text(
               'Forgot Password',
               style: headingStyle,

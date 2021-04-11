@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomSuffixIcon extends StatelessWidget {
   const CustomSuffixIcon({
@@ -14,7 +13,7 @@ class CustomSuffixIcon extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(0, 20, 20, 20),
       child: SvgPicture.asset(
         svgIcon,
-        height: 18.r,
+        height: 18,
       ),
     );
   }

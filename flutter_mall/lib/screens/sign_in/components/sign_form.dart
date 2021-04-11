@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_mall/components/custom_svg.dart';
 import 'package:flutter_mall/components/default_button.dart';
 import 'package:flutter_mall/components/form_error.dart';
 import 'package:flutter_mall/screens/forgot_password/forgot_password_screen.dart';
+import 'package:flutter_mall/screens/sign_in_success/sign_in_success.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../constants.dart';
 
@@ -61,6 +63,9 @@ class _SignFormState extends State<SignForm> {
               press: () {
                 if (_formKey.currentState.validate()) {
                   _formKey.currentState.save();
+
+                  // 登录成功
+                  Navigator.pushNamed(context, SignSuccessScreen.roteName);
                 }
               },
             )
